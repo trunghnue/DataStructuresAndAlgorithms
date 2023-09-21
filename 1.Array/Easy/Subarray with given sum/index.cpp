@@ -1,5 +1,7 @@
 //{ Driver Code Starts
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
 // } Driver Code Ends
@@ -25,7 +27,8 @@ public:
             {
                 if (left < right)
                 {
-                    result = {left + 1, right};
+                    result.push_back(left + 1);
+                    result.push_back(right);
                     return result;
                 }
             }
@@ -41,7 +44,7 @@ public:
             }
         }
 
-        result = {-1}; // If no subarray is found, return {-1}.
+        result.push_back(-1); // If no subarray is found, return {-1}.
         return result;
     }
 };
