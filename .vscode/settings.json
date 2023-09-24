@@ -1,6 +1,8 @@
 {
   "editor.formatOnSave": true,
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "deque": "cpp",
+    "vector": "cpp"
   }
 }
