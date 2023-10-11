@@ -1,5 +1,6 @@
 //{ Driver Code Starts
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 // } Driver Code Ends

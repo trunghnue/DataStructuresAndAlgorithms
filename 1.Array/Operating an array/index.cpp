@@ -1,5 +1,7 @@
 //{ Driver Code Starts
 #include <iostream>
+#include <string.h>
+#include <vector>
 using namespace std;
 bool searchEle(int a[], int x);
 bool insertEle(int a[], int y, int yi);
