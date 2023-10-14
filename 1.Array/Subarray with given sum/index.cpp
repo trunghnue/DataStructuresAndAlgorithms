@@ -13,39 +13,35 @@ public:
     vector<int> subarraySum(vector<int> arr, int n, long long s)
     {
         // Your code here
-        int left = 0, right = 0, sum = 0;
         vector<int> result;
+        int left = 0, right = 0;
+        long long sum = 0;
 
-        while (right <= n)
+        while (right < n)
         {
-            while (sum > s && left < right)
+            sum += arr[right];
+
+            while (sum > s)
             {
                 sum -= arr[left];
                 left++;
             }
 
-            if (sum == s)
+            if (sum == s && left <= right)
             {
-                if (left < right)
-                {
-                    result.push_back(left + 1);
-                    result.push_back(right);
-                    return result;
-                }
+                result.push_back(left + 1);
+                result.push_back(right + 1);
+                return result;
             }
 
-            if (right < n)
-            {
-                sum += arr[right];
-                right++;
-            }
-            else
-            {
-                break; // If right reaches the end and sum is still not equal to s, exit the loop.
-            }
+            right++;
         }
 
-        result.push_back(-1); // If no subarray is found, return {-1}.
+        if (result.empty())
+        {
+            result.push_back(-1);
+        }
+
         return result;
     }
 };
