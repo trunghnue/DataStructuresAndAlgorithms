@@ -5,6 +5,7 @@
     "deque": "cpp",
     "vector": "cpp",
     "numbers": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "random": "cpp"
   }
 }
